@@ -1,64 +1,89 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <title>Javascript Tetris</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Javascript Tetris</title>
+
+  <style>
+    #fpsControls {
+      position: fixed;
+      z-index: 1000;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: min(80vw, 420px);
+      padding: 20px;
+      box-sizing: border-box;
+
+      background: rgba(255, 255, 255, 0.95);
+      border: 3px solid #333;
+      border-radius: 12px;
+
+      font-family: Monaco, monospace;
+      text-align: center;
+      color: #333;
+    }
+
+    #fpsTitle {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    #fpsValue {
+      font-size: 20px;
+      margin-bottom: 12px;
+    }
+
+    #fpsSlider {
+      width: 100%;
+      cursor: pointer;
+    }
+
+    #fpsRange {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      margin-top: 5px;
+    }
+
+    #fpsControls.hidden {
+      display: none;
+    }
+  </style>
 </head>
+
 <body id="main">
 
-<canvas id="statCanvas"></canvas>
-<canvas id="gameCanvas"></canvas>
+  <canvas id="statCanvas"></canvas>
+  <canvas id="gameCanvas"></canvas>
 
-    <style>
-  #fpsControls {
-    position: fixed;
-    z-index: 1000;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: min(80vw, 420px);
-    padding: 20px;
-    box-sizing: border-box;
+  <!-- FPS CONTROL -->
+  <div id="fpsControls">
+    <div id="fpsTitle">GAME SPEED</div>
 
-    background: rgba(255, 255, 255, 0.92);
-    border: 3px solid #333;
-    border-radius: 12px;
+    <div id="fpsValue">FPS: 45</div>
 
-    font-family: Monaco, monospace;
-    text-align: center;
-    color: #333;
-  }
+    <input
+      id="fpsSlider"
+      type="range"
+      min="5"
+      max="120"
+      step="1"
+      value="45"
+      aria-label="Game speed"
+    >
 
-  #fpsTitle {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
+    <div id="fpsRange">
+      <span>5 FPS</span>
+      <span>120 FPS</span>
+    </div>
+  </div>
 
-  #fpsValue {
-    font-size: 20px;
-    margin-bottom: 12px;
-  }
-
-  #fpsSlider {
-    width: 100%;
-    cursor: pointer;
-  }
-
-  #fpsRange {
-    display: flex;
-    justify-content: space-between;
-    font-size: 12px;
-    margin-top: 5px;
-  }
-
-  #fpsControls.hidden {
-    display: none;
-  }
-</style>
-
-<script src="game.js">
-</script>
+  <script src="game.js"></script>
 
 </body>
 </html>
+
