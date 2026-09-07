@@ -683,7 +683,9 @@ function setDifficulty() {
         else {
             challengeRows = 2;
         }
-        createChallengeRow(challengeRows);
+if (challengeLayersEnabled == true) {
+    createChallengeRow(challengeRows);
+}
         blocksAddedToken = 0;
     }
     fallSpeed = Math.floor(playerScore / 100) + 1;
