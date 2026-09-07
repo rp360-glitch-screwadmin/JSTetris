@@ -14,3 +14,50 @@
 
 </body>
 </html>
+<style>
+  #fpsControls {
+    position: fixed;
+    z-index: 1000;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: min(80vw, 420px);
+    padding: 20px;
+    box-sizing: border-box;
+
+    background: rgba(255, 255, 255, 0.92);
+    border: 3px solid #333;
+    border-radius: 12px;
+
+    font-family: Monaco, monospace;
+    text-align: center;
+    color: #333;
+  }
+
+  #fpsTitle {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  #fpsValue {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+
+  #fpsSlider {
+    width: 100%;
+    cursor: pointer;
+  }
+
+  #fpsRange {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+
+  #fpsControls.hidden {
+    display: none;
+  }
+</style>
