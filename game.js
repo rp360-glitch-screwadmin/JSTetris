@@ -7,9 +7,7 @@ var sideCanvas = document.getElementById("statCanvas");
 var sideContext = sideCanvas.getContext("2d");
 
 var baseUnitSize = 40; // Tetromino block size in pixels, this value scales everything
-var FPS = 45;
-var DEFAULT_FPS = 45;
-var gameLoopTimer = null;
+const FPS = 45;
 const TETROMINOS = ["I", "O", "T", "S", "Z", "J", "L"];
 const opacitySpectrum = ["00", "08", "10", "18", "20", "28", "30", "38", "40", "48", "50", "58", "60", "68", "70", "78", "80", "88", "90", "98", "A0", "A8", "B0", "B8", "C0", "C8", "D0", "D8", "E0", "E8", "F0", "F8", "FF"];
 
