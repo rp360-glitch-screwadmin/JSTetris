@@ -617,6 +617,7 @@ function downCallBack(j, i){
 //------------------------------------------------------------------------------
 var futurePieces = [];
 var fallenPieces = [];
+var challengeLayersEnabled = false;
 var fallSpeed = 1; // base units per second
 var fallspeedReference = 1;
 var gamePlayRounds = 0;
